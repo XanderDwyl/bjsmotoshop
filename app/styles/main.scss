@@ -1,0 +1,231 @@
+@import'../bower_components/sass-bootstrap/lib/bootstrap';
+@import'custom/nivo-slider.scss';
+@import'custom/theme-nivo-slider.scss';
+@import'custom/animated.scss';
+@import'custom/font-awesome.scss';
+@import'custom/fontface.scss';
+
+$bjs-white           : #ffffff;
+$bjs-yellow          : #ffe000;
+$bjs-orange          : #ff9a00;
+$bjs-orange-light    : #ffc873;
+$bjs-orange-bg-light : #ffb440;
+$bjs-orange-dark     : #a66400;
+$bjs-orange-bg-dark  : #bf8730;
+$bjs-blue            : #0d56a6;
+$bjs-blue-light      : #4186d3;
+$bjs-blue-bg-light   : #689ad3;
+$bjs-blue-dark       : #04356c;
+$bjs-blue-bg-dark    : #274f7d;
+
+$bjs-width   : 1140px;
+$bjs-title   : 1.3em;
+$bjs-content : 1em;
+
+body {
+    padding     : 0 !important;
+    margin      : 0 !important;
+    font-family : 'Open Sans' !important;
+}
+ol, ul {
+	list-style: none;
+}
+.row {
+	margin: 0;
+	padding: 0;
+}
+a:hover {
+	text-decoration : none;
+}
+.radius-corner {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.no-radius {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.header-wrapper {
+    color            : #464F5C;
+    border-bottom    : 5px solid $bjs-orange;
+    background-color : $bjs-blue;
+
+	.header {
+		height : 100px;
+		max-width  : $bjs-width;
+		margin : 0 auto;
+
+		.logo {
+			margin : 8px 0 0;
+			img {
+				width: 190px;
+				height: 80px;
+			}
+		}
+		.widget {
+			.submenu {
+				font-size: 11px;
+				width: 100%;
+				padding: 0 0 10px;
+			}
+			.submenu {
+				& > ul {
+					& > li {
+						padding: 0 5px;
+						line-height: 14px;
+						border-width: 0 0 1px 1px;
+						border-style: solid;
+						border-color: #94b5c8;
+					}
+					& > li:hover {
+						background : $bjs-white;
+					}
+					& > li:first-child {
+						border-left: 0;
+					}
+				}
+			}
+			.social-media ul {
+				& > li {
+					margin-right : 5px;
+					border       : 1px solid $bjs-orange;
+					font-size    : 1.5em;
+					text-align   : center;
+					line-height  : 32px;
+					width        : 35px;
+					& > a {
+						color : $bjs-orange;
+					}
+				}
+				& > li:hover {
+					background : $bjs-orange;
+					cursor     : pointer;
+					& > a {
+						color : $bjs-blue;
+					}
+				}
+
+			}
+			.form-group {
+				width: 45%;
+			}
+		}
+	}
+}
+.breadcrumbs {
+	background: #fcfcfc;
+	border-top: solid 1px #f5f5f5;
+	border-bottom: solid 1px #f5f5f5;
+	h3 {
+		color: #555;
+		font-size: 24px;
+		line-height: 35px;
+		margin-top: 10px;
+	}
+}
+
+.bjs-nav-bar {
+    border-width     : 0;
+    background-color : $bjs-blue-light;
+    margin-bottom    : 0;
+    .brand-name {
+		font-size : 1.5em;
+    	margin    : 12px;
+		color     : $bjs-blue-bg-dark;
+		span {
+			color : $bjs-yellow;
+		}
+    }
+	.navbar-wrapper {
+    	max-width : $bjs-width;
+    	margin    : 0 auto;
+	}
+    .navbar-nav {
+    	font-size: $bjs-title;
+        li {
+            & > a {
+                color       : $bjs-white;
+            }
+            & > a:hover {
+                background-color : $bjs-orange-bg-light;
+            }
+        }
+        .active {
+            & > a {
+                background-color : $bjs-orange;
+                color : $bjs-blue;
+            }
+            & > a:hover {
+                background-color : $bjs-orange-bg-light;
+            }
+        }
+    }
+}
+
+.dashboard-layout {
+	max-width : ( $bjs-width - 30 );
+	margin    : 0 auto;
+	padding   : 0;
+	.carousel {
+		height : auto;
+		margin : 10px auto 30px;
+		.nivo-prevNav, .nivo-nextNav {
+			height   : 55px;
+			width    : 55px;
+			top      : 180px;
+			overflow : hidden;
+			position : absolute;
+			display  : block;
+			cursor   : pointer;
+		}
+		.nivo-prevNav {
+			background          : url('../images/arrow-slide.png') no-repeat;
+			background-position : -123px -33px;
+			left                : 8px;
+		}
+		.nivo-nextNav {
+			background          : url('../images/arrow-slide.png') no-repeat;
+			background-position : -183px -33px;
+			right               : 8px;
+		}
+		.nivo-controlNav {
+			padding : 0;
+		}
+	}
+	.row {
+		.widget {
+			height  : 350px;
+			padding : 20px;
+			.widget-content {
+				height : 100%;
+				border : 1px solid $bjs-orange-light;
+			}
+		}
+	}
+}
+
+/* footer */
+#footer {
+	.footer-wrapper {
+		background   : $bjs-blue-bg-light;
+		height       : 200px;
+	}
+	.footer-copyright {
+		.copyright {
+			max-width : $bjs-width;
+			margin    : 0 auto;
+			padding   : 13px 0;
+			color     : $bjs-orange;
+		}
+		border-top   : 4px solid $bjs-orange;
+		background   : $bjs-blue;
+		height       : 50px;
+	}
+}
+
+.slider-wrapper {
+	width: 80%;
+	margin: 100px auto;
+}
